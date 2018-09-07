@@ -1,0 +1,63 @@
+@mixin bg($url) {
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../assets/img/"+ $url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url("../assets/img/"+ $url + "@3x.png");
+  }
+}
+
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin scaleY-origin($XY: XY) {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  @if $XY == X {
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  } @else if $XY == Y {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  } @else {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@mixin border($color: black, $position: square) {
+  position: relative;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    @if $position == left {
+      height: 100%;
+      border-left: 1px solid $color;
+      @include scaleY-origin(X);
+    } @else if $position == top {
+      width: 100%;
+      border-top: 1px solid $color;
+      @include scaleY-origin(Y);
+    } @else if $position == right {
+      height: 100%;
+      border-right: 1px solid $color;
+      @include scaleY-origin(X);
+    } @else if $position == bottom {
+      width: 100%;
+      border-bottom: 1px solid $color;
+      @include scaleY-origin(Y);
+    } @else {
+      width: 200%;
+      height: 200%;
+      border: 1px solid $color;
+      @include scaleY-origin();
+    }
+  }
+}

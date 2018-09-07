@@ -1,0 +1,56 @@
+$baseColor: #42b983 !default;
+
+$s20: 0.53333333rem !default;
+$s19: 0.50666667rem !default;
+$s18: 0.48rem !default;
+$s17: 0.45333333rem !default;
+$s16: 0.42666667rem !default;
+$s15: 0.4rem !default;
+$s14: 0.37333333rem !default;
+$s13: 0.34666667rem !default;
+$s12: 0.32rem !default;
+$s11: 0.29333333rem !default;
+$s10: 0.26666667rem !default;
+
+body,
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: PingFangTC-Light;
+}
+
+button,
+input,
+select,
+textarea {
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $baseColor;
+}
+
+.mask, .mask-transparent {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.mask-white {
+  background: white;
+}
