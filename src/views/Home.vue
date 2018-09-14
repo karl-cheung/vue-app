@@ -59,7 +59,7 @@ export default {
   .msg {
     display: inline-block;
     padding: $s10 * 3 0;
-    color: $baseColor;
+    color: $base-color;
     font-size: $s18;
     a {
       text-decoration: underline;

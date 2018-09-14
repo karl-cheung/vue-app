@@ -1,6 +1,6 @@
 # vue-app
 
-> 一个基于 [Vue CLI 3] 快速生成 Vue 项目的初步封装，组装或必要的零件。开箱即用。
+> 基于 [Vue CLI 3] 快速生成 Vue 项目的初步封装，组装或必要的零件。开箱即用。
 
 ## Vue CLI 3 加入的配置
 
@@ -21,11 +21,11 @@ $ npm install babel-plugin-component node-sass sass-loader -D
 
 * HTTP 库选择 axios 并通过 vue-axio 集成到 Vue.js 中
 
-  + 设置默认配置(baseURL, timeout)
+  + 设置默认配置，包括但不限于 baseURL、timeout
 
-  + 添加全局拦截器且 loading 包含其中
+  + 添加全局拦截器且 Indicator 与 Toast 包含其中
 
-  + 通过请求传递 params ```hide: true``` 实现无 loading 请求。(或通过实例化新的 axios 对象)
+  + 通过请求传递 params ```hide: true``` 实现无 Indicator 请求。(或通过实例化新的 axios 对象)
 
   + 抽出所有 api 请求 ```@/api/index```
 

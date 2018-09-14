@@ -7,10 +7,10 @@ import '@/config/axios'
 import 'amfe-flexible'
 
 // Vue 全局扩展 filters
-import filters from '@/util/filters'
-for (var k in filters) {
-  Vue.filter(k, filters[k])
-}
+import * as filters from '@/util/filters'
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 Vue.config.productionTip = false
 

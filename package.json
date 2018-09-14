@@ -1,7 +1,7 @@
 {
   "name": "vue-app",
   "version": "1.0.0",
-  "description": "一个基于 [Vue CLI 3] 快速生成 Vue 项目的初步封装，组装或必要的零件。开箱即用。",
+  "description": "基于 [Vue CLI 3] 快速生成 Vue 项目的初步封装，组装或必要的零件。开箱即用。",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vincheung/vue-app.git"
