@@ -37,8 +37,6 @@ $ npm install babel-plugin-component node-sass sass-loader -D
 
     - 加载背景图 2 倍 与 3 倍像素
 
-    - 垂直水平居中
-
     - 移动端 1px 边框实现
 
   + base
@@ -47,7 +45,7 @@ $ npm install babel-plugin-component node-sass sass-loader -D
 
     - 初始化其他 html 标签
 
-    - 添加通用蒙版样式
+    - 添加通用 class
 
 * 路由使用异步加载 ```component: resolve => require(['@/views/Home'], resolve)```
 

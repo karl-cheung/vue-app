@@ -1,11 +1,11 @@
 <template>
   <div>
     <progress-bar ref="bar"></progress-bar>
-    <div class="container">
+    <div class="container center">
       <span class="logo"></span>
       <p class="msg">Welcome to Your <a href="https://github.com/vincheung/vue-app">vue-app</a>.</p>
       <div>
-        <spinner :show="loading" v-for="item in 7" :key="item"></spinner>
+        <spinner :show="loading"></spinner>
       </div>
     </div>
   </div>
@@ -50,7 +50,6 @@ export default {
 .container {
   width: 100%;
   text-align: center;
-  @include center();
   .logo {
     width: 60px;
     height: 60px;
