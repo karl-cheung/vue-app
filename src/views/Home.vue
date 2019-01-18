@@ -30,7 +30,7 @@ export default {
   created () {
     // // 模拟
     // this.axios({
-    //   url: api.getBanners,
+    //   url: '/home/banner',
     //   params: {
     //     maxNum: 10
     //   }

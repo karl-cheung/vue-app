@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '@/config/axios'
+import '@/services/axios'
 import 'amfe-flexible'
 
 // Vue 全局扩展 filters

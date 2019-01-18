@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': {
+      '/server': {
         target: 'https://vincheung.github.io',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/server': ''
         }
       }
     },
