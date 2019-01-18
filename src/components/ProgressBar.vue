@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       percent: 0,
       show: false,
@@ -22,11 +22,11 @@ export default {
       failedColor: '#ff0000'
     }
   },
-  created () {
+  created() {
     this.start()
   },
   methods: {
-    start () {
+    start() {
       this.show = true
       this.canSuccess = true
       if (this._timer) {
@@ -42,33 +42,33 @@ export default {
       }, 100)
       return this
     },
-    set (num) {
+    set(num) {
       this.show = true
       this.canSuccess = true
       this.percent = Math.floor(num)
       return this
     },
-    get () {
+    get() {
       return Math.floor(this.percent)
     },
-    increase (num) {
+    increase(num) {
       this.percent = this.percent + Math.floor(num)
       return this
     },
-    decrease (num) {
+    decrease(num) {
       this.percent = this.percent - Math.floor(num)
       return this
     },
-    finish () {
+    finish() {
       this.percent = 100
       this.hide()
       return this
     },
-    pause () {
+    pause() {
       clearInterval(this._timer)
       return this
     },
-    hide () {
+    hide() {
       clearInterval(this._timer)
       this._timer = null
       setTimeout(() => {
@@ -81,7 +81,7 @@ export default {
       }, 500)
       return this
     },
-    fail () {
+    fail() {
       this.canSuccess = false
       return this
     }

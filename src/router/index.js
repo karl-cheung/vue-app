@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: resolve => require(['@/views/Home'], resolve)
+      component: resolve => require(['@/views/Home'], resolve),
     }
   ]
 })

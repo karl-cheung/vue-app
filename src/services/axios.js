@@ -101,7 +101,7 @@ export function request3(url, option) {
 /*
  * 你还可以通过 axios.create 来创建自定义实例，使不同实例拥有不同的配置
  * const instance = axios.create({
- *    baseURL: 'https://vincheung.github.io'
+ *    baseURL: 'https://vincheung.github.io',
  * });
  * instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 */

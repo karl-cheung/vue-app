@@ -1,7 +1,7 @@
 // 货币金额的过滤
 const digitsRE = /(\d{3})(?=\d)/g
 
-function currency (value, currency, decimals) {
+function currency(value, currency, decimals) {
   value = parseFloat(value)
   if (!isFinite(value) || (!value && value !== 0)) return ''
   currency = currency != null ? currency : '$'
@@ -24,5 +24,5 @@ function currency (value, currency, decimals) {
 }
 
 export default {
-  currency: currency
+  currency,
 }

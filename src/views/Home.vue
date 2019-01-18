@@ -19,15 +19,15 @@ import ProgressBar from '../components/ProgressBar'
 export default {
   name: 'Home',
   components: { Spinner, ProgressBar },
-  data () {
+  data() {
     return {
-      loading: true
+      loading: true,
     }
   },
-  mounted () {
+  mounted() {
     this.$refs.bar.finish()
   },
-  created () {
+  created() {
     // // 模拟
     // this.axios({
     //   url: '/home/banner',
