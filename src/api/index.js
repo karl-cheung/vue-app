@@ -10,5 +10,5 @@ export default {
   isAndroid,
   isWx,
   isAp,
-  code: '0',
+  code: 0,
 }

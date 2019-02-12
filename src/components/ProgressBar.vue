@@ -19,11 +19,8 @@ export default {
       duration: 3000,
       height: '2px',
       color: '#42b983',
-      failedColor: '#ff0000'
+      failedColor: '#ff0000',
     }
-  },
-  created() {
-    this.start()
   },
   methods: {
     start() {
@@ -84,8 +81,11 @@ export default {
     fail() {
       this.canSuccess = false
       return this
-    }
-  }
+    },
+  },
+  created() {
+    this.start()
+  },
 }
 </script>
 

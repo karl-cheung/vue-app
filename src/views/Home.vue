@@ -4,42 +4,51 @@
     <div class="container center">
       <span class="logo"></span>
       <p class="msg">Welcome to Your <a href="https://github.com/vincheung/vue-app">vue-app</a>.</p>
-      <div>
-        <spinner :show="loading"></spinner>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Spinner from '../components/Spinner'
+import { mapGetters, mapActions } from 'vuex'
 import ProgressBar from '../components/ProgressBar'
 // import api from '@/api'
 
 export default {
   name: 'Home',
-  components: { Spinner, ProgressBar },
-  data() {
-    return {
-      loading: true,
-    }
-  },
+  components: { ProgressBar },
   mounted() {
     this.$refs.bar.finish()
   },
+  methods: {
+    ...mapActions([
+      'queryListHome',
+    ]),
+  },
+  computed: {
+    ...mapGetters({
+      banner: 'ListHome',
+    }),
+  },
   created() {
-    // // 模拟
-    // this.axios({
-    //   url: '/home/banner',
-    //   params: {
-    //     maxNum: 10
-    //   }
-    // }).then(res => {
-    //   if (res.data.code === api.code) {
-    //     console.log('获取成功')
-    //   }
-    // })
-  }
+    /*
+    * 不使用 Vuex
+    * this.axios({
+    *   url: '/query/list',
+    *   params: {
+    *     maxNum: 10
+    *   }
+    * }).then(res => {
+    *   if (res.data.code === api.code) {
+    *     console.log('获取成功')
+    *   }
+    * })
+    */
+
+    /*
+    * 使用 Vuex
+    * this.queryListHome()
+    */
+  },
 }
 </script>
 

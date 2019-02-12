@@ -5,8 +5,19 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   name: 'App',
+  computed: mapGetters([
+    'user',
+  ]),
+  methods: mapActions([
+    'queryUser',
+  ]),
+  created() {
+    this.queryUser()
+  }
 }
 </script>
 

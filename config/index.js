@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/server': {
-        target: 'https://vincheung.github.io',
+        target: 'http://121.196.195.117:8084',
         changeOrigin: true,
         pathRewrite: {
           '^/server': ''

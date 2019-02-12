@@ -11,7 +11,7 @@
 ## 追加的依赖清单
 
 ```shell
-npm install axios vue-axio amfe-flexible mint-ui qs -S
+npm install amfe-flexible axios mint-ui qs vue vue-axios vue-router vuex -S
 npm install babel-plugin-component node-sass sass-loader -D
 ```
 
@@ -28,6 +28,14 @@ npm install babel-plugin-component node-sass sass-loader -D
   + 通过 vue-axio 注入到 Vue 实例中
 
   + 导出多个不同服务的 request 请求
+
++ 可根据需要自行删减 Vuex
+
+  + 规范了中大型项目使用 Vuex 时的目录层次，全局与局部解耦
+
+  + 使用 async / await，使异步流程更加优雅
+
+  + 开发环境添加了热重载
 
 + 集成 css 预处理器 sass 与使用 amfe-flexible 实现可伸缩布局方案
 
@@ -51,11 +59,25 @@ npm install babel-plugin-component node-sass sass-loader -D
 
 + 目录规范化
 
-  + ```views``` 路由目录，相应静态资源分类至 ```assets``` 下
+  + ```api``` 全局的常量导出
+
+  + ```assets``` 静态资源目录
 
   + ```components``` 组件目录，相应组件静态资源同目录同级维护。 ```component1.vue``` ```component1/component1-1@2x.png```
 
-  + ```config``` 所有功能插件的初始化目录。
+  + ```router``` 路由
+
+  + ```services``` request 配置及请求导出
+
+  + ```store``` 状态管理
+
+    + ```index``` 组装模块并导出 store
+
+    + ```actions``` 根级别的 action
+
+    + ```mutations``` 根级别的 mutation
+
+    + ```moudules``` 模块化
 
   + ```util```
 
@@ -63,7 +85,7 @@ npm install babel-plugin-component node-sass sass-loader -D
 
     + ```filters.js``` 过滤器函数且已全局扩展至 Vue
 
-  + ```assets``` 静态资源目录
+  + ```views``` 路由目录，相应静态资源分类至 ```assets``` 下
 
 ## Build Setup
 

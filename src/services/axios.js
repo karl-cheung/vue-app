@@ -86,6 +86,13 @@ function createRequest(data, url, option) {
   })
 }
 
+export function requestMock(url, option) {
+  return axios({
+    url,
+    ...option,
+  })
+}
+
 export function request(url, option) {
   return createRequest(server, url, option)
 }
