@@ -79,7 +79,7 @@ npm install babel-plugin-component node-sass sass-loader -D
 
     + ```moudules``` 模块化
 
-  + ```util```
+  + ```utils```
 
     + ```util.js``` 工具函数
 

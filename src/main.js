@@ -8,7 +8,7 @@ import '@/services/axios'
 import 'amfe-flexible'
 
 // Vue 全局扩展 filters
-import * as filters from '@/util/filters'
+import * as filters from '@/utils/filters'
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
