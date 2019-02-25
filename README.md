@@ -61,13 +61,31 @@ npm install babel-plugin-component node-sass sass-loader -D
 
   + ```api``` 全局的常量导出
 
-  + ```assets``` 静态资源目录
+  + ```assets``` 静态资源
 
-  + ```components``` 组件目录，相应组件静态资源同目录同级维护。 ```component1.vue``` ```component1/component1-1@2x.png```
+    + ```css``` 全局 css
+
+    + ```img``` views 目录下各路由的业务图片资源
+
+    + ```sass``` 全局 sass
+
+  + ```components``` 组件库目录
+
+    + ```component1```
+
+      + ```component1.vue```
+
+      + ```component1-1@2x.png```
 
   + ```router``` 路由
 
   + ```services``` request 配置及请求导出
+
+    + ```axios``` request 请求配置
+
+    + ```index``` 业务请求方法的导出
+
+    + ```user``` 全局用户模块从 index 中的抽离
 
   + ```store``` 状态管理
 
@@ -87,11 +105,27 @@ npm install babel-plugin-component node-sass sass-loader -D
 
   + ```views``` 路由目录，相应静态资源分类至 ```assets``` 下
 
+    + ```Home``` Home 页面目录
+
+      + ```Home.vue``` Home 组件
+
+      + ```Banner.vue``` Home 组件的私有子组件
+
+## 初始化
+
+若是已知悉项目组装及使用，这里还提供了一份清除示例代码的精简版本（移除示例代码，只留下功能补充）可供下载使用。
+
+[vue-app]
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
+
+or
+
+yarn install
 
 # serve with hot reload at localhost:8080
 npm run dev
@@ -120,3 +154,5 @@ The [MIT License].
 [reset]: https://codepen.io/danielfarias/pen/iJecj
 
 [MIT License]: ./LICENSE
+
+[vue-app]: https://github.com/vincheung/vue-app/blob/master/vue-app.zip

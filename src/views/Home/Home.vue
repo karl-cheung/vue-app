@@ -10,7 +10,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import ProgressBar from '../components/ProgressBar'
+import ProgressBar from '@/components/ProgressBar/ProgressBar'
 // import api from '@/api'
 
 export default {
