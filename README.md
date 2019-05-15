@@ -111,12 +111,6 @@ npm install babel-plugin-component node-sass sass-loader -D
 
       + ```Banner.vue``` Home 组件的私有子组件
 
-## 初始化
-
-若是已知悉项目组装及使用，这里还提供了一份清除示例代码的精简版本（移除示例代码，只留下功能补充）可供下载使用。
-
-[vue-app]
-
 ## Build Setup
 
 ``` bash
@@ -154,5 +148,3 @@ The [MIT License].
 [reset]: https://codepen.io/danielfarias/pen/iJecj
 
 [MIT License]: ./LICENSE
-
-[vue-app]: https://github.com/vincheung/vue-app/blob/master/vue-app.zip
