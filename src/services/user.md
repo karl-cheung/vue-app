@@ -1,3 +1,6 @@
+# user
+
+```js
 export function queryCurrentUser() {
   const res = {
     code: 0,
@@ -10,3 +13,4 @@ export function queryCurrentUser() {
     setTimeout(() => resolve(res), 700)
   })
 }
+```

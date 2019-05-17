@@ -1,3 +1,6 @@
+# home
+
+```js
 import api from '@/api'
 import { queryList, queryListFake } from '@/services'
 
@@ -32,3 +35,4 @@ export default {
   actions,
   mutations
 }
+```

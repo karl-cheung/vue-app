@@ -1,3 +1,6 @@
+# ProgressBar
+
+```vue
 <!-- borrowed from Nuxt! -->
 
 <template>
@@ -103,3 +106,4 @@ export default {
   z-index: 999999;
 }
 </style>
+```

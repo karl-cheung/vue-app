@@ -1,3 +1,6 @@
+# Spinner
+
+```vue
 <template>
   <transition>
     <svg class="spinner" :class="{ show: show }" v-show="show" width="44px" height="44px" viewBox="0 0 44 44">
@@ -64,3 +67,4 @@ $duration: 2.4s;
   }
 }
 </style>
+```

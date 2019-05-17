@@ -1,3 +1,6 @@
+# Home
+
+```vue
 <template>
   <div>
     <progress-bar ref="bar"></progress-bar>
@@ -75,3 +78,4 @@ export default {
   }
 }
 </style>
+```
