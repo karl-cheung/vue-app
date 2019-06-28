@@ -14,7 +14,9 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
-// import api from '@/api'
+// import constant from '@/utils/constant'
+
+// const { code } = constant
 
 export default {
   name: 'Home',
@@ -41,7 +43,7 @@ export default {
     *     maxNum: 10
     *   }
     * }).then(res => {
-    *   if (res.data.code === api.code) {
+    *   if (res.data.code === code) {
     *     console.log('获取成功')
     *   }
     * })

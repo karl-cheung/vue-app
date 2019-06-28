@@ -5,10 +5,11 @@ const isWx = u.indexOf('MicroMessenger') !== -1
 const isAp = u.indexOf('AlipayClient') !== -1
 
 export default {
-  v: 'v1.0.0',
   isIos,
   isAndroid,
   isWx,
   isAp,
+  v: 'v1.0.0',
   code: 0,
+  timeout: 6000,
 }

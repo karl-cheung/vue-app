@@ -1,8 +1,10 @@
 # home
 
 ```js
-import api from '@/api'
 import { queryList, queryListFake } from '@/services'
+import constant from '@/utils/constant'
+
+const { code } = constant
 
 const RECEIVE_LIST = 'RECEIVE_LIST'
 
@@ -17,7 +19,7 @@ const getters = {
 const actions = {
   async queryListHome({ commit }) {
     const res = process.env.NODE_ENV === 'production' ? await queryList() : await queryListFake()
-    if (res.code === api.code) {
+    if (res.code === code) {
       commit(RECEIVE_LIST, res.items.list)
     }
   },

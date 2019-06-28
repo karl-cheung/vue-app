@@ -2,7 +2,9 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { Indicator, Toast } from 'mint-ui'
-import api from '@/api'
+import constant from '@/utils/constant'
+
+const { code, timeout } = constant
 
 Vue.use(VueAxios, axios)
 
@@ -42,11 +44,8 @@ axios.defaults.baseURL = pathRewrite(server)
 
 // 2.其他配置
 
-// 载入接口正常返回时的状态码
-const code = api.code
-
 // 设置请求超时时间
-axios.defaults.timeout = 6000
+axios.defaults.timeout = timeout
 
 // 3.拦截器
 

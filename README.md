@@ -59,8 +59,6 @@ npm install babel-plugin-component node-sass sass-loader -D
 
 + 目录规范化
 
-  + ```api``` 全局的常量导出
-
   + ```assets``` 静态资源
 
     + ```css``` 全局 css
@@ -98,6 +96,8 @@ npm install babel-plugin-component node-sass sass-loader -D
     + ```moudules``` 模块化
 
   + ```utils```
+
+    + ```constant``` 全局常量的导出
 
     + ```util.js``` 工具函数
 
