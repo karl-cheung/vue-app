@@ -1,56 +1,50 @@
+/* 超出一行隐藏 */
+@mixin text-overflow() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+/* 超出多行隐藏 */
+@mixin multi-text-overflow($n) {
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+/* 载入倍图 */
 @mixin bg($url) {
   display: inline-block;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url("../../assets/img/"+ $url + "@2x.png");
+  background-image: url("../../assets/img/"+$url+"@2x.png");
   @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
-    background-image: url("../../assets/img/"+ $url + "@3x.png");
+    background-image: url("../../assets/img/"+$url+"@3x.png");
   }
 }
 
-@mixin scaleY-origin($XY: XY) {
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  @if $XY == X {
-    -webkit-transform: scaleX(0.5);
-    transform: scaleX(0.5);
-  } @else if $XY == Y {
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.5);
-  } @else {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-}
-
-@mixin border($color: black, $position: square) {
+/* 0.5px 边框，支持 square */
+@mixin br($color: black, $square: false) {
   position: relative;
-
   &:before {
     content: " ";
     position: absolute;
     top: 0;
-    @if $position == left {
-      height: 100%;
-      border-left: 1px solid $color;
-      @include scaleY-origin(X);
-    } @else if $position == top {
-      width: 100%;
-      border-top: 1px solid $color;
-      @include scaleY-origin(Y);
-    } @else if $position == right {
-      height: 100%;
-      border-right: 1px solid $color;
-      @include scaleY-origin(X);
-    } @else if $position == bottom {
-      width: 100%;
-      border-bottom: 1px solid $color;
-      @include scaleY-origin(Y);
-    } @else {
+    @if $square == true {
       width: 200%;
       height: 200%;
       border: 1px solid $color;
-      @include scaleY-origin();
+      transform-origin: 0 0;
+      transform: scale(0.5);
+    } @else {
+      width: 100%;
+      border-top: 1px solid $color;
+      transform-origin: 0 0;
+      transform: scaleY(0.5);
     }
   }
 }

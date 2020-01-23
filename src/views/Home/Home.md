@@ -64,6 +64,7 @@ export default {
 .container {
   width: 100%;
   text-align: center;
+  @include br($base-color, true);
   .logo {
     width: 60px;
     height: 60px;
@@ -74,6 +75,7 @@ export default {
     padding: $s10 * 3 0;
     color: $base-color;
     font-size: $s18;
+    @include br();
     a {
       text-decoration: underline;
     }

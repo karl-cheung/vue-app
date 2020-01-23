@@ -45,7 +45,7 @@ npm install babel-plugin-component node-sass sass-loader -D
 
     + 加载背景图 2 倍 与 3 倍像素
 
-    + 移动端 1px 边框实现
+    + 移动端 0.5px 边框实现
 
   + base
 
